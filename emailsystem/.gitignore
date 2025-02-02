@@ -1,0 +1,17 @@
+
+venv/
+.env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+
+node_modules/
+package-lock.json
+serverless-*.json
+.DS_Store
+
+
+.aws-sam/
+.serverless/
