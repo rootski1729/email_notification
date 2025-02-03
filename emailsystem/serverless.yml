@@ -1,6 +1,3 @@
-# "org" ensures this Service is used with the correct Serverless Framework Access Key.
-org: rootski
-# "service" is the name of this project. This will also be added to your AWS resource names.
 service: emailsystem
 
 custom:
@@ -10,6 +7,11 @@ custom:
 provider:
   name: aws
   runtime: python3.12
+  region: ap-south-1
+  stage: dev
+  environment:
+    EMAIL_USER: ${env:EMAIL_USER}
+    EMAIL_PASSWORD: ${env:EMAIL_PASSWORD}
 
 functions:
   api:
@@ -25,3 +27,4 @@ functions:
 plugins:
   - serverless-wsgi
   - serverless-python-requirements
+  - serverless-offline

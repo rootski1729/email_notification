@@ -1,17 +1,16 @@
 
 venv/
-.env
-__pycache__/
+env/
 *.pyc
 *.pyo
 *.pyd
+__pycache__/
+*.dist-info/
 
 
 node_modules/
 package-lock.json
-serverless-*.json
-.DS_Store
+package.json
 
 
-.aws-sam/
-.serverless/
+*.log
